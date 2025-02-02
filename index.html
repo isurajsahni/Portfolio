@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    h1 {
+        font-family: "Playfair Display";
+        font-size: clamp(2.2rem, 6vw, 6rem);
+        color: white;
+        line-height: 1.1em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: "Playfair Display";
+        color: white;
+        font-size: clamp(2rem, 5vw, 5.3rem);
+        line-height: 1.1em;
+        text-transform: uppercase;
+    }
+
+    h3 {
+    font-size: clamp(1.8rem, 3.5vw, 4rem);
+    color: white;
+      font-family: "Playfair Display";
+         line-height: 1.1em;
+        text-transform: uppercase;
+        margin-top: 50px;
+}
+    p {
+        font-size: clamp(1.1rem, 1.7vw, 2.3rem);
+        font-family: "Poppins";
+        color: #ffffff52;
+    }
+
+    /* hero-section*/
+section.hero-section {
+    background: #0e0e0e;
+    padding: 2vw 3vw 100px;
+}
+
+    .hero-main-div {
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        max-width: 2400px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .hero-left {
+        width: 38%;
+        padding: 4% 3%;
+        background: white;
+        border-radius: 50px;
+        position: sticky !important;
+        top: 0;
+        text-align: center;
+    }
+
+    img.profile {
+        width: 100%;
+        border-radius: 4%;
+        transition: all 0.3s;
+    }
+
+    p.p24 {
+        font-size: clamp(1.2rem, 1.7vw, 2.3rem);
+        margin-top: 30px;
+        color: #000;
+    }
+
+    p.p22p {
+        margin-top: 20px;
+        color: #000000ab;
+    }
+
+img.logo:hover, img.social:hover {
+    transform: scale(1.3) !important;
+}
+
+img.profile:hover {
+    transform: scale(1.1);
+}
+button.hire-me:hover {
+    transform: scale(1.1);
+}
+
+    /*right div*/
+    .hero-container {
+        padding: 0 0 10%;
+    }
+
+    .hero-right {
+        width: 65%;
+    }
+
+    span.light {
+        color: #ffffff52;
+    }
+
+    .marginn {
+        margin-top: 20px;
+    }
+
+    button.hire-me {
+        padding: 15px 40px;
+        border-radius: 50px;
+        font-size: clamp(1.2rem, 1.7vw, 2.3rem);
+        outline: none;
+        margin-top: 30px;
+        transition: all 0.3s;
+        border: none;
+    }
+
+    button.hire-me:after {
+    content: url(https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/53fbbb3d-0933-4605-876c-638af228d65d/arrow-1-2.original.svg);
+    position: relative;
+    margin-left: 10px;
+}
+
+    button.hire-me.pro:after {
+    content: url(https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/65aaee51-7c7e-491e-b4d5-7be13f31c320/arrow-1-1.original.svg);
+    position: relative;
+    margin-left: 10px;
+}
+
+button.hire-me.pro {
+    background: #000000e0;
+}
+
+a.whitea {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    font-weight: 600;
+}
+    /*second div about me*/
+
+    .second-div-about-me {
+        padding: 0 0 10%;
+    }
+
+    span.high-light {
+        color: white;
+    }
+
+img.logo {
+    /* max-height: 100px; */
+    height: clamp(50px, 6vw, 120px);
+    transition: all 0.3s;
+}
+
+.image-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    column-gap: 4%;
+    row-gap: 40px;
+    align-items: center;
+}
+
+img.logo.Webflow {
+    height: clamp(40px, 6vw, 60px);
+}
+
+img.logo.pagefly {
+    height: clamp(40px, 6vw, 60px);
+}
+
+
+.hero-container {
+    padding: 0 0 15%;
+}
+
+
+a.high-light {
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+/* contact us*/
+.social-contact {
+    display: flex
+;
+    gap: 30px;
+    padding: 50px 0 0;
+}
+
+img.social {
+    /* max-width: 110px; */
+    max-height: 80px;
+}
+
+.contact-div {
+    padding: 80px 0 0;
+}
+
+.contact-content {
+    padding: 30px 0 10px;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .hero-main-div {
+    flex-direction: column;
+    gap: 50px;
+}
+
+ .hero-left {
+        max-width: 400px;
+        width: 90%;
+        position: relative !important;
+        text-align: center;
+        border-radius: 30px;
+        margin: 0 auto;
+        padding: 40px 25px;
+    }
+
+
+    .hero-right {
+    width: 100%;
+}
+
+.second-div-about-me {
+    padding: 0 0 15%;
+}
+
+h3 {
+    margin: 30px 0 0 0px;
+}
+
+img.profile {
+    width: 80%;
+}
+
+.image-container {
+    justify-content: center;
+    row-gap: 25px;
+}
+
+.hero-right {
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(1.8rem, 3.5vw, 4rem);
+}
+
+.hero-container {
+    padding: 0 0 10%;
+}
+
+.social-contact {
+    gap: 20px;
+    padding: 30px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img.social {
+    /* max-width: 110px; */
+    max-height: 60px;
+}
+
+.contact-content {
+        text-align: left;
+        max-width: 270px;
+        margin: 0 auto;
+    }
+
+        img.profile {
+        width: 100%;
+    }
+}
+
+
+</style>
+
+<body>
+    <section class="hero-section">
+        <div class="hero-main-div">
+            <div class="hero-left" >
+                <img src="https://image-service.unbounce.com/https%3A%2F%2Fapp.unbounce.com%2Fpublish%2Fassets%2F6920325c-dfbf-47df-862c-a0e10346d01e%2F039f7658-whatsapp-image-2024-12-31-at-19-45-44-06460009-1-1-enhanced-1-2_10b40d3000000000000028.png?w=400&h=471&png8=true"
+                    alt="" class="profile">
+                <p class="p24">Hi, I’m Suraj!</p>
+                <p class="p22p">Crafting Beautiful, Functional Websites That Elevate Your Brand</p>
+                <button class="hire-me pro"><a href="mailto:isurajsahni7@gmail.com" class="whitea">Hire me</a></button>
+            </div>
+
+            <div class="hero-right"   data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-container"   data-aos="zoom-in-right"  data-aos-duration="1000">
+                    <h1>frontend<br><span class="light">developer</span></h1>
+                    <p class="marginn">Driven by a passion for designing intuitive and engaging user experiences, I
+                        specialize in transforming innovative ideas into beautifully crafted, high-performing websites
+                        and digital solutions.</p>
+                    <button class="hire-me"><a href="mailto:isurajsahni7@gmail.com">Hire me</a></button>
+
+                </div>
+
+                <div class="second-div-about-me"  data-aos="fade-up" data-aos-duration="1000">
+                    <h2>
+                        About Me
+                    </h2>
+
+                    <p class="marginn">I specialize in creating user-friendly and visually appealing websites using
+                        tools like <span class="high-light"> Webflow, Unbounce, ClickFunnels, WordPress, wix, pagefly,
+                            shopify, squarespace, figma, photoshop and many more.</span> With 7 months+ of experience, I
+                        focus on delivering tailored solutions that meet client needs and drive results.</p>
+                
+
+                <div class="image-container" data-aos="zoom-in-down"  data-aos-duration="1000">
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/10665b57-953f-4973-8f69-62d86336830a/group-3.original.svg"
+                        alt="" class="logo Webflow"  data-aos="fade-right" data-aos-duration="1000">
+
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/7e3f6e91-168d-4282-8da9-53d7fdb187da/shopify-logo-2018-1-1.original.svg"
+                        alt="" class="logo Webflow"  data-aos="fade-up" data-aos-duration="1000">
+
+                        <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/bdbe1a1a-2338-46af-b03f-a22d627b4695/pagefly-logo-freelogovectors-net-1.original.svg"
+                            alt="" class="logo pagefly"  data-aos="zoom-in-down"  data-aos-duration="1000">
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/a813d4c0-f8d9-4e4c-bac0-bab584aa4013/figma-logo-512-1.original.svg"
+                        alt="" class="logo"  data-aos="zoom-in-right" data-aos-duration="1000">
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/5fe95804-a458-429c-b945-787c259a56d8/adobe-photoshop-cc-icon-svg-1.original.svg"
+                        alt="" class="logo"  data-aos="zoom-in-left" data-aos-duration="1000">
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/3d56f6ff-b35c-4373-b4c9-62551b5e583a/unbounce-icon-1024x1024-1jjas7kq-1.original.svg"
+                        alt="" class="logo"  data-aos="fade-up" data-aos-duration="1000">
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/8cb647ad-4bed-4b6b-a4a9-97a38c2e0494/f525be82-3cdf-4ca1-99b8-8d1583696f1c-1.original.svg"
+                        alt="" class="logo"  data-aos="fade-right" data-aos-duration="1000">
+
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/c633b642-d52b-4c31-a3d8-c362dd92ce5c/click-funnels.original.svg"
+                        alt="" class="logo"  data-aos="zoom-in-right" data-aos-duration="1000">
+
+                   
+                </div>
+
+            </div>
+
+
+
+            <div class="skills-div"  data-aos="zoom-in-right" data-aos-duration="1000">
+                <h2>
+                   Skills &<span class="light"> tools</span>
+                </h2>
+
+                <h3>Frontend <span class="light">Development</span></h3>
+                
+                <p class="marginn"><span class="high-light"> HTML, CSS, JavaScript, Tailwind, Figma, Photoshop</span></p>
+
+<div class="image-container"  data-aos="zoom-in-left" data-aos-duration="1000">
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/7121042c-ed75-443a-986a-07a24b7e581d/html5-logo-and-wordmark-svg-1.small.png"
+    alt="" class="logo" data-aos="zoom-in-right" data-aos-duration="1000" >
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/7b0e96a2-5b0c-4ea5-a88d-038fdb943f06/css3-logo-and-wordmark-svg-1.original.svg"
+    alt="" class="logo"  data-aos="zoom-in-left" data-aos-duration="1000">
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/9de2e14f-0b25-471e-9707-d8f86257bb78/unofficial-javascript-logo-2-svg-1.original.svg"
+    alt="" class="logo"  data-aos="fade-up" data-aos-duration="1000">
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/3ab8a23b-21cb-4f71-902c-7251e2ce7bc3/tailwind-css-logo-svg-1.original.svg"
+    alt="" class="logo"  data-aos="fade-right" data-aos-duration="1000">
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/a813d4c0-f8d9-4e4c-bac0-bab584aa4013/figma-logo-512-1.original.svg"
+    alt="" class="logo"   data-aos="zoom-in-right" data-aos-duration="1000">
+
+<img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/5fe95804-a458-429c-b945-787c259a56d8/adobe-photoshop-cc-icon-svg-1.original.svg"
+    alt="" class="logo"  data-aos="zoom-in-right" data-aos-duration="1000">
+
+    </div>
+
+<h3>Web <span class="light">Tools</span></h3>
+
+<p class="marginn"><span class="high-light">Webflow, Unbounce, ClickFunnels, WordPress, Figma, shopify, pagefly, wix studio, suqaresapce etc.</span></p>
+
+
+<div class="image-container" data-aos="zoom-in-down" data-aos-duration="1000">
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/10665b57-953f-4973-8f69-62d86336830a/group-3.original.svg"
+        alt="" class="logo Webflow" data-aos="fade-right" data-aos-duration="1000">
+
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/7e3f6e91-168d-4282-8da9-53d7fdb187da/shopify-logo-2018-1-1.original.svg"
+        alt="" class="logo Webflow" data-aos="fade-up" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/bdbe1a1a-2338-46af-b03f-a22d627b4695/pagefly-logo-freelogovectors-net-1.original.svg"
+        alt="" class="logo pagefly" data-aos="zoom-in-down" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/a813d4c0-f8d9-4e4c-bac0-bab584aa4013/figma-logo-512-1.original.svg"
+        alt="" class="logo" data-aos="zoom-in-right" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/5fe95804-a458-429c-b945-787c259a56d8/adobe-photoshop-cc-icon-svg-1.original.svg"
+        alt="" class="logo" data-aos="zoom-in-left" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/3d56f6ff-b35c-4373-b4c9-62551b5e583a/unbounce-icon-1024x1024-1jjas7kq-1.original.svg"
+        alt="" class="logo" data-aos="fade-up" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/8cb647ad-4bed-4b6b-a4a9-97a38c2e0494/f525be82-3cdf-4ca1-99b8-8d1583696f1c-1.original.svg"
+        alt="" class="logo" data-aos="fade-right" data-aos-duration="1000">
+
+    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/c633b642-d52b-4c31-a3d8-c362dd92ce5c/click-funnels.original.svg"
+        alt="" class="logo" data-aos="zoom-in-right" data-aos-duration="1000">
+
+
+</div>
+
+
+            </div>
+
+
+            <div class="contact-div"   data-aos="zoom-in-down"  data-aos-duration="1000">
+
+                <h2>
+                    Contact <span class="light">Me</span>
+                </h2>
+
+                <p class="marginn"><span class="high-light">Have a project in mind or need a website that stands out? I’d love to help! Feel free to reach out, and let’s bring your
+                ideas to life.</span></p>
+
+
+                <div class="contact-content"   data-aos="zoom-in-right" data-aos-duration="1000">
+                  <p>Phone: <a href="tel:7973386875" class="high-light">+91 79733 86875</a></p> 
+                  <p>Email: <a  href="mailto:isurajsahni7@gmail.com" class="high-light">isurajsahni7@gmail.com</a></p> 
+                </div>
+                <button class="hire-me"><a href="mailto:isurajsahni7@gmail.com">Hire me</a></button>
+
+                <h3  data-aos="fade-up" data-aos-duration="1000">SOCIAL <span class="light">LINKS</span></h3>
+                <div class="social-contact"   data-aos="fade-right" data-aos-duration="1000">
+
+                    <a href="https://www.instagram.com/surajsahni2003/?igsh=MTRldDV3aXQ2em0zbA%3D%3D#">
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/73a68143-0fcb-4385-a64c-f127e2a8728b/instagram-logo-2016-svg-1.original.svg" alt="" class="social"   data-aos="zoom-in-down"  data-aos-duration="1000"> </a>
+
+
+                    <a href="https://wa.me/7973386875">
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/1013e1c1-4c70-413f-a243-807241db3696/whatsapp-svg-1.original.svg" alt="" class="social"   data-aos="zoom-in-right" data-aos-duration="1000"> </a>
+
+                    <a href="https://www.linkedin.com/in/suraj-sahni-72b63a279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" >
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/8b5043c1-fe9a-4d24-9b03-19df21155956/linkedin-logo-wine-1.original.svg" alt="" class="social"  data-aos="fade-right" data-aos-duration="1000"></a>
+
+
+                    <a href="mailto:isurajsahni7@gmail.com">
+                    <img src="https://user-assets-unbounce-com.s3.amazonaws.com/b7fc884c-6945-4876-8a78-c624fc67bfe2/df03c8c9-ed7a-4f9e-982f-2c5150743c3b/112-gmail-email-mail-512-1.original.svg" alt="" class="social"   data-aos="fade-up" data-aos-duration="1000"></a>
+                </div>
+
+            </div>
+</div>
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
